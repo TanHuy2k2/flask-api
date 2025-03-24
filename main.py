@@ -14,11 +14,6 @@ foods = load_foods()
 
 df_main = pd.DataFrame(foods)
 
-# Route to render the HTML page
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 # Route to handle the search request
 @app.route('/search', methods=['GET'])
 def search_food():
